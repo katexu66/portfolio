@@ -220,11 +220,11 @@ header table {
 #photos img {
     width:100%;
     height:auto;
-    margin:4.5% 0px;
+    margin:4% 0px;
     transition:0.4s ease-in-out;
 }
 #photos img:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
     cursor: pointer;
 }
 #bio {
