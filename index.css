@@ -170,9 +170,9 @@ header table {
 }
 .social:hover {
     cursor: pointer;
-    color:#fff;
-    background:rgb(59, 140, 55);
-    box-shadow:0px 10px 30px rgba(255, 66, 107,0.8);
+    /* color:#fff; */
+    /* background:rgb(59, 140, 55); */
+    /* box-shadow:0px 10px 30px rgba(59, 140, 55); */
 }
 .btn_one {
     font-size:18px;
