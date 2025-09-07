@@ -196,7 +196,6 @@ header table {
 #rightImage {
     width:20%;
     height:50px;
-    /* background:linear-gradient(0deg,rgba(59, 140, 55, 0.8),rgba(59, 140, 55, 0.8)),url("https://images.unsplash.com/photo-1506057527569-6a0285b2fcc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=60") center center; */
     background:url("./photography.png") center center;
     background-size:200px;
     background-repeat:no-repeat;
@@ -231,7 +230,6 @@ header table {
 #bio {
     width:92vw;
     padding:6vh 4vw;
-    font-weight:bold;
 }
 #bio h1 {
     padding:5px 0px;
