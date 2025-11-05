@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 /* #blogs {
     width:92vw;
     padding:6vh 4vw;
@@ -8,8 +10,10 @@
 } */
 
 body {
-    font-family: "Roboto Mono", monospace;
-    font-weight: 400;
+    /* font-family: "Roboto Mono", monospace; */
+    /* font-family: "Andale Mono", monospace; */
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: 400; */
 }
 
 #blogs {
