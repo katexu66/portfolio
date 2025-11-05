@@ -476,14 +476,13 @@ website colors:
 }
 
 .project-card {
-  aspect-ratio: 1 / 1; /* square card */
+  aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease-in-out; /* same as photos */
 }
 
 .project-card img {
@@ -491,41 +490,31 @@ website colors:
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease-in-out; /* for smooth zoom */
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  cursor: pointer;
 }
 
-.overlay {
+.project-title {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 0;
-  background: rgba(177, 106, 202, 0.6); /* the a adds opacity */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
-  padding: 1rem;
-  overflow: hidden;
-  transition: height 0.3s ease;
-}
-
-.project-card:hover .overlay {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.overlay h3 {
-  margin-bottom: 0.5rem;
   font-size: 1.4rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none; /* ensures clicks go through to the link */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
-.overlay p {
-  font-size: 0.9rem;
+.project-card:hover .project-title {
+  opacity: 1;
 }
 
 /*  */
