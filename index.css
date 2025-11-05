@@ -64,13 +64,23 @@ body {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
-header {
+/* header {
     width:92vw;
     padding:6vh 4vw;
     position:fixed;
     font-weight:bold;
     background:transparent;
     color:#fff;
+    transition:0.4s ease-in-out;
+    z-index:2;
+} */
+header {
+    width:92vw;
+    padding:6vh 4vw;
+    position:fixed;
+    font-weight:bold;
+    background:#fff;
+    color:#000;
     transition:0.4s ease-in-out;
     z-index:2;
 }
