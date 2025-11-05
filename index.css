@@ -51,6 +51,7 @@ body {
     flex-direction: column;
     align-items: center;
 }
+/* should try customizing spinner to smth cool some time */
 #spinner {
     animation: rotate 0.56s infinite linear;
     width:50px;
@@ -64,7 +65,7 @@ body {
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
 }
-header {
+/* header {
     width:92vw;
     padding:6vh 4vw;
     position:fixed;
@@ -73,8 +74,9 @@ header {
     color:#fff;
     transition:0.4s ease-in-out;
     z-index:2;
-}
-/* header {
+} */
+/*to make navbar visible on first open*/
+header {
     width:92vw;
     padding:6vh 4vw;
     position:fixed;
@@ -83,7 +85,7 @@ header {
     color:#000;
     transition:0.4s ease-in-out;
     z-index:2;
-} */
+}
 header table {
     width:100%;
 }
@@ -242,6 +244,15 @@ header table {
     padding:6vh 4vw;
 }
 #bio h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(59, 140, 55);
+    width:8%;
+}
+#projects {
+    width:92vw;
+    padding:6vh 4vw;
+}
+#projects h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(59, 140, 55);
     width:8%;
@@ -431,4 +442,76 @@ button:focus {
     #navigation a {
         color:#000;
     }
+}
+
+/*
+
+website colors:
+- base color (green): rgb(59, 140, 55) or #3B8C37
+- lighter: #43943E
+- lighter: #6CA964
+- complementary color (purple): #A149C1
+- lighter: #B16ACA
+- lighter: #C189D3
+
+*/
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-card {
+  aspect-ratio: 1 / 1; /* square card */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background: rgba(177, 106, 202, 0.6); /* the a adds opacity */
+  color: #fff;
+  padding: 1rem;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.overlay p {
+  font-size: 0.9rem;
 }
