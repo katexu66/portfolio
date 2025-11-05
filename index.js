@@ -11,7 +11,7 @@ if ((width >= 1000)){
         },function(){
             $(this).css("border-bottom","2px solid transparent");
         });
-    }else{
+    }else{ // if you want navbar to always be visible, change this part to match above part (i.e. #fff, #000), and then it won't disappear when scrolling back up
         $("#header").css("background","transparent");
         $("#header").css("color","#fff");
         $("#header").css("box-shadow","0px 0px 0px rgba(0,0,0,0)");
