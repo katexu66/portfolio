@@ -11,9 +11,9 @@ if ((width >= 1000)){
         },function(){
             $(this).css("border-bottom","2px solid transparent");
         });
-    }else{ // if you want navbar to always be visible, change this part to match above part (i.e. #fff, #000), and then it won't disappear when scrolling back up
-        $("#header").css("background","transparent");
-        $("#header").css("color","#fff");
+    }else{ // if you want navbar to always be visible vs disappear when scrolling back up
+        $("#header").css("background","#fff"); // "transparent"
+        $("#header").css("color","#000"); // "#fff"
         $("#header").css("box-shadow","0px 0px 0px rgba(0,0,0,0)");
         $("#header").css("padding","6vh 4vw");
         $("#navigation a").hover(function(){
