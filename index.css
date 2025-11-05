@@ -516,14 +516,3 @@ website colors:
 .project-card:hover .project-title {
   opacity: 1;
 }
-
-/*  */
-
-#blogs {
-    width:92vw;
-    padding:6vh 4vw;
-}
-#blogs h1 {
-    padding:5px 0px;
-    border-bottom:4px solid rgb(59, 140, 55);
-}
