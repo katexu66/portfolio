@@ -316,9 +316,11 @@ header table {
 }
 #footer {
     width:100%;
-    padding:10vh 0px;
+    /* padding:10vh 0px; */
+    padding:3vh 0px;
     text-align:center;
-    font-weight:bold;
+    /* font-weight:bold; */
+    font-weight: 500;
 }
 #footer a {
     color:rgb(59, 140, 55);
