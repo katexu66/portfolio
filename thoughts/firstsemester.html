@@ -11,6 +11,11 @@
     <!-- <link rel="stylesheet" href="../index.css"> -->
     <link rel="stylesheet" href="../subpage.css">
 </head>
+<style>
+    ul li {
+        margin-bottom: 8px; /* Adjust this value as needed */
+    }
+</style>
 <body>
     <!-- <div id="loading">
         <div id="spinner"></div>
@@ -40,9 +45,17 @@
         <h1>Learnings from my first semester at MIT</h1>
         <h4>November 5, 2025</h4>
         <p>
-            hi
+            Engineering learnings:
+            <ul>
+                <li>Always make conservative assumptions - err on the side of caution! Apply a factor of safety for loads and forces (usually 1.5 or 2). Safety and a working part/system are the most important. Engineer for worst-case scenarios</li>
+                <li>Good engineering is very rigorous, and requires a LOT of analysis. Every decision should be justified with calculations and analysis - why is this architecture better for this system, why this type of pulley or gear, why placement of this part here? Question everything, especially the assumptions which underlie the models</li>
+                <li>To be truly passionate about something you should believe in *both* the product and the process</li>
+                <uL><li>In learning as well, to truly understand something you should understand both the high-level concepts and intuition and the technical workings</li></uL>
+                <li>Iteration and feedback are immensely important, and very related. Be humble and aware of your unknowns, seek feedback and input from people who know more, improve and iterate</li>
+	            <uL><li>(The more well-justified your initial decisions are, the less resources you have to spend iterating)</li></uL>
+                <li>Everything is about inputs and outputs. This is quite obvious in CS, but it applies to mech e as well: if you input a load here, what deformation or stress does the system output? This is why almost everything physical can be modeled by differential equations/"everything is a spring"</li>
+            </ul>
         </p>
     </div>
-    <script src="../index.js" type="text/javascript"></script>
 </body>
 </html>

@@ -14,7 +14,8 @@ body {
 
 #blogs {
     margin: 0;
-    padding: 0 500px;
+    margin-top: 100px;
+    padding: 0 350px;
 }
 
 #blogs h2 {
@@ -52,5 +53,15 @@ header {
     transition:0.4s ease-in-out;
 }
 #home a:hover{
+    border-bottom:2px solid #fff;
+}
+
+#pagelink {
+    color:inherit;
+    text-decoration:underline;
+    border-bottom:2px solid transparent;
+    transition:0.4s ease-in-out;
+}
+#pagelink:hover {
     border-bottom:2px solid #fff;
 }
