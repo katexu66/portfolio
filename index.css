@@ -475,14 +475,24 @@ website colors:
   gap: 2rem;
 }
 
+/* new wrapper */
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;               /* each grid cell */
+}
+
 .project-card {
-  aspect-ratio: 1 / 1;
+  display: block;             /* anchor behaves like a block */
+  width: 100%;                /* fill the 300px cell */
+  aspect-ratio: 1 / 1;        /* square */
   position: relative;
   overflow: hidden;
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.4s ease-in-out; /* same as photos */
+  transition: transform 0.4s ease-in-out;
 }
 
 .project-card img {
@@ -490,7 +500,7 @@ website colors:
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.4s ease-in-out; /* for smooth zoom */
+  transition: transform 0.4s ease-in-out;
 }
 
 .project-card:hover {
@@ -499,20 +509,12 @@ website colors:
 }
 
 .project-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 600;
+  margin-top: 0.5rem;
+  color: #000;
+  /* font-size:20px;
+  word-wrap:break-word;
+  font-weight:bold; */
+  /* font-size: 1.4rem;
+  font-weight: 600; */
   text-align: center;
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-  pointer-events: none; /* ensures clicks go through to the link */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-.project-card:hover .project-title {
-  opacity: 1;
 }

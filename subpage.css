@@ -22,6 +22,23 @@ body {
     padding: 0 350px;
 }
 
+/* Mobile: override padding and spacing */
+@media (max-width: 768px) {
+    #blogs {
+        padding: 0 20px;     /* much smaller side padding */
+        margin-top: 120px;   /* adjust if header overlap is an issue */
+    }
+
+    header {
+        width: 100vw;        /* avoid weird 92vw on tiny screens */
+        padding: 3vh 4vw;    /* slightly smaller header padding */
+    }
+
+    #home {
+        padding: 20px 0;     /* avoid huge vertical space inside header */
+    }
+}
+
 #blogs h2 {
     font-size: 50px;
 }

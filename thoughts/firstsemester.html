@@ -42,20 +42,36 @@
     </header>
     <br><br><br>
     <div id="blogs">
-        <h1>Learnings from my first semester at MIT</h1>
+        <h1>Engineering learnings from my first semester at MIT</h1>
         <h4>November 5, 2025</h4>
         <p>
-            Engineering learnings:
             <ul>
-                <li>Always make conservative assumptions - err on the side of caution! Apply a factor of safety for loads and forces (usually 1.5 or 2). Safety and a working part/system are the most important. Engineer for worst-case scenarios</li>
                 <li>Good engineering is very rigorous, and requires a LOT of analysis. Every decision should be justified with calculations and analysis - why is this architecture better for this system, why this type of pulley or gear, why placement of this part here? Question everything, especially the assumptions which underlie the models</li>
+                <li>Always make conservative assumptions - err on the side of caution! Apply a factor of safety for loads and forces (usually 1.5 or 2). Safety and a working part/system are the most important. Engineer for worst-case scenarios and edge cases</li>
                 <li>To be truly passionate about something you should believe in *both* the product and the process</li>
-                <uL><li>In learning as well, to truly understand something you should understand both the high-level concepts and intuition and the technical workings</li></uL>
+                <uL><li>In learning as well, to truly understand something you should understand both the high-level concepts and intuition, and the technical workings</li></uL>
                 <li>Iteration and feedback are immensely important, and very related. Be humble and aware of your unknowns, seek feedback and input from people who know more, improve and iterate</li>
 	            <li>Everything is inputs and outputs. This is quite obvious in CS, but it applies to mech e as well: if you input a load here, what deformation or stress does the system output? This is why almost everything physical can be modeled by differential equations/"everything is a spring"</li>
                 <li>Do things well the first time around. The more well-justified your initial decisions are, the less resources you have to spend iterating. The more robust your initial design or initial code, the less you have to adjust and fix later</li>
             </ul>
+            <ul>
+                <li>Engineering in three words: readability, stability, and robustness</li>
+                <ul>
+                    <li>Readability: can other people understand your logic and scrutinize your work. Is it followable? Good engineers communicate well</li>
+                    <li>Stability: if you change something small in the system, does it explode and diverge or does it remain mostly the same? <sup><a href="#fn1" id="ref1">1</a></sup> Also parameterization</li>
+                    <li>Robustness: do you account for edge cases, does the system still work under the extremes</li>
+                </ul>
+            </ul>
         </p>
+
+        <hr>
+        <ol>
+            <li id="fn1">
+                differential equations definition of stability :) but it applies here as well
+                <a href="#ref1">↩</a>
+            </li>
+        </ol>
     </div>
+
 </body>
 </html>
