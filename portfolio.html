@@ -37,7 +37,7 @@
     </header>
     <br><br><br>
     <div id="blogs">
-        <h1>Kate Xu</h1>
+        <h1><a href="./index.html" style="text-decoration: none; color: black">Kate Xu</a></h1>
         <p>
             Mechanical Engineering and Mathematics with Computer Science @ MIT <br>
             <a class="link" href="mailto:katexu66@mit.edu">katexu66@mit.edu</a>
@@ -58,8 +58,6 @@
         <div id="photos">
             <a href="./projects/motorsports.html"><img src="./portfolio_images/driverless.png"></a>
             <p class="caption"><b>MIT Motorsports</b>: Driverless Mechanisms</p>
-
-            <!-- <img onclick="magnify($(this).attr('src'))" src="./portfolio_images/realman.webp"> CSAIL -->
             <!-- <img class="photo" src="./portfolio_images/sailbot_real.png"> -->
             <a href="./projects/qianjue.html"><img src="./portfolio_images/realman.webp"></a>
             <p class="caption"><b>Qianjue Robotics Technology</b></p>
@@ -72,45 +70,16 @@
             <a href="./projects/medialab.html"><img src="./portfolio_images/signal.webp"></a>
             <p class="caption"><b>MIT Media Lab Biomechatronics Group</b>: Rehabilitative Swallowing Technology</p>
             <a href="./projects/beaverworks.html"><img src="./portfolio_images/AUV.png"></a>
-            <p class="caption"><b>MIT Beaver Works</b>: Autonomous Underwater Vehicles</p>
-            <a href="./projects/tentacle.html"><img src="./portfolio_images/tentacle.jpg"></a>
             <p class="caption"><b>FTC Roboctopi</b>: Robotic Tentacle Bot</p>
             <a href="./projects/bioremediation.html"><img src="./portfolio_images/microscope.jpg"></a>
+            <p class="caption"><b>MIT Beaver Works</b>: Autonomous Underwater Vehicles</p>
+            <a href="./projects/tentacle.html"><img src="./portfolio_images/tentacle.jpg"></a>
             <p class="caption">Reducing Lead Contamination Through Hydroponically-Grown Mycorrhizal Plants</p>
         </div>
-        <div id="overlay" onclick="off1()">
-            <!-- <img id="overlayImg" style="transform: scale(0.5);"> -->
-            <h1 id="overlayTitle"></h1>
-            <p id="overlayDesc"></p>
-        </div>
-    </div>
-    <script>
-        const overlay = document.getElementById("overlay");
-        const overlayImg = document.getElementById("overlayImg");
-        const overlayTitle = document.getElementById("overlayTitle");
-        const overlayDesc = document.getElementById("overlayDesc");
-
-        document.querySelectorAll(".photo").forEach(img => {
-            img.addEventListener("click", () => {
-
-                // overlayImg.src = img.src;
-                overlayTitle.textContent = img.dataset.title;
-                overlayDesc.textContent = img.dataset.description;
-
-                overlay.style.display = "block";
-
-                document.querySelectorAll('body *:not(#overlay):not(#overlay *)')
-                    .forEach(el => el.style.opacity = '0.5');
-                });
-        });
-
-
-        function off1() {
-            overlay.style.display = "none";
-            document.querySelectorAll('body *:not(#overlay):not(#overlay *)')
-                .forEach(el => el.style.opacity = '1');
-        }
-    </script>
-    <!-- <script src="./index.js" type="text/javascript"></script> -->
+        <br>
+        <hr>
+        <br>
+        <p class="caption2">Side projects</p>
+        <a href="./projects/sideprojects.html"><img src="./images/fish_light.jpg" style="width: 200px"></a>
 </body>
 </html>
