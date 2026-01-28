@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* #blogs {
+    width:92vw;
+    padding:6vh 4vw;
+}
+#blogs h1 {
+    padding:5px 0px;
+    border-bottom:4px solid rgb(59, 140, 55);
+} */
+
+body {
+    /* font-family: "Roboto Mono", monospace; */
+    /* font-family: "Andale Mono", monospace; */
+    font-family: 'Poppins', sans-serif;
+    /* font-weight: 400; */
+}
+
+/* overlay */
+
+#overlay {
+  position: fixed;
+  margin: auto;
+  display: none;
+  width: 40%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+#overlay h1 {
+  color: white;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+#overlay p {
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* lists */
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: -0.75em; /* reduces spacing between list name and list */
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+#blogs {
+    margin: 0;
+    margin-top: 100px;
+    padding: 0 350px;
+}
+
+#photos {
+    width:100%;
+    columns:2;
+    column-gap:4%;
+    z-index:1;
+    transition:0.4s ease-in-out;
+}
+#photos img {
+    width:100%;
+    height:auto;
+    margin:4% 0px;
+    transition:0.4s ease-in-out;
+}
+#photos img:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* Mobile: override padding and spacing */
+@media (max-width: 768px) {
+    #blogs {
+        padding: 0 20px;     /* much smaller side padding */
+        margin-top: 120px;   /* adjust if header overlap is an issue */
+    }
+
+    header {
+        width: 100vw;        /* avoid weird 92vw on tiny screens */
+        padding: 3vh 4vw;    /* slightly smaller header padding */
+    }
+
+    #home {
+        padding: 20px 0;     /* avoid huge vertical space inside header */
+    }
+}
+
+#blogs h2 {
+    font-size: 50px;
+}
+
+#blogs p {
+    font-size: 15px;
+}
+
+.caption {
+    font-size: 10px;
+    padding: 0 160px;
+}
+
+header {
+    width:92vw;
+    padding:5vh 4vw;
+    position:fixed;
+    font-weight:bold;
+    background: transparent;
+    color:#000;
+    transition:0.4s ease-in-out;
+    z-index:2;
+}
+
+#home {
+    color: rgb(59, 140, 55);
+    padding: 50px 0;
+}
+#home a {
+    color:inherit;
+    text-decoration:none;
+    border-bottom:2px solid transparent;
+    transition:0.4s ease-in-out;
+}
+#home a:hover{
+    border-bottom:2px solid #fff;
+}
+
+#pagelink {
+    color:inherit;
+    text-decoration:underline;
+    border-bottom:2px solid transparent;
+    transition:0.4s ease-in-out;
+}
+#pagelink:hover {
+    border-bottom:2px solid #fff;
+}

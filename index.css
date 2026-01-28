@@ -5,10 +5,7 @@
     text-decoration: none
 }
 .link:hover {
-   text-decoration: underline;
-}
-.link:visited{
-    color: rgb(32, 77, 30);
+   color: rgb(38, 99, 35);
 }
 
 /* .link {
@@ -75,6 +72,17 @@ body {
     transition:0.4s ease-in-out;
     z-index:2;
 } */
+
+/* lists */
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-top: -0.75em; /* reduces spacing between list name and list */
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
 /*to make navbar visible on first open*/
 header {
     width:92vw;
@@ -232,7 +240,7 @@ header table {
 #photography h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(59, 140, 55);
-    width:6%;
+    width:16%;
 }
 #photos {
     width:100%;
@@ -258,7 +266,7 @@ header table {
 #bio h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(59, 140, 55);
-    width:8%;
+    width:12%;
 }
 #projects {
     width:92vw;
@@ -267,7 +275,7 @@ header table {
 #projects h1 {
     padding:5px 0px;
     border-bottom:4px solid rgb(59, 140, 55);
-    width:8%;
+    width:10%;
 }
 #contact {
     width:92vw;
