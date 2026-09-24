@@ -61,9 +61,9 @@ $(document).ready(function(){
         event.preventDefault();
         var hash = this.hash;
         $('body,html').animate({
-        scrollTop: $(hash).offset().top
-        }, 1800, function(){
-        window.location.hash = hash;
+        scrollTop: $(hash).offset().top - $("#header").outerHeight() - 5
+        }, 1300, function(){
+        history.pushState(null, null, hash);
        });
        }
       });
