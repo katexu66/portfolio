@@ -44,12 +44,17 @@
             In high school I spent many nights learning and playing the guitar, but I wasn't able to bring my guitar to college. So, I decided to build my own!
         </p>
         <p>
-            I made the body of the guitar, and purchased the guitar neck and pickups. The total project, including the electronics and a guitar amp, was $315; if you're curious, here's my <a class="link" href="https://docs.google.com/spreadsheets/d/1hlAq4DmobSHkZW1_i3QXpsIVq-bNLOpl2DFBp7cUzHI/edit?usp=sharing">BOM</a>.
+            I made the body of the guitar, and purchased the guitar neck and pickups. I chose to use two humbucker pickups for a warmer tone. The total project, including the electronics and a guitar amp, was $315; if you're curious, here's my <a class="link" href="https://docs.google.com/spreadsheets/d/1hlAq4DmobSHkZW1_i3QXpsIVq-bNLOpl2DFBp7cUzHI/edit?usp=sharing">BOM</a>.
         </p>
         <p>
-            This project had a few main phases: ideation and design, woodworking, and electronics and debugging. Through this project I learned how much I love woodworking - there is something immensely satisfying and beautiful in carving out and creating from a block of wood! Guitar is now even more enjoyable now that I can play my own :)
+            This project had a few main phases: ideation and design, woodworking, and electronics and debugging. Through this project I learned how much I love woodworking - there is something immensely satisfying and beautiful in carving out and creating from a block of wood!  And guitar is even more enjoyable now that I can play my own guitar :)
         </p>
+
         <div class="slideshow">
+
+            <div class="slide-counter">
+                <span id="current-slide">1</span> / <span id="total-slides">4</span>
+            </div>
 
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
 
@@ -60,31 +65,59 @@
 
             <div class="slide">
                 <img src="../images/guitar.jpg" alt="">
-                <p class="slide-caption">Caption for photo 2</p>
+                <p class="slide-caption">Adding layers of finish (wipe-on polyurethane)</p>
             </div>
 
             <div class="slide">
                 <img src="../images/guitar4.JPG" alt="">
-                <p class="slide-caption">Caption for photo 2</p>
+                <p class="slide-caption">Routing the pickups through the front...</p>
             </div>
 
             <div class="slide">
-                <img src="../images/guitar5.jpg" alt="">
-                <p class="slide-caption">Caption for photo 3</p>
+                <img src="../images/guitar45.JPG" alt="">
+                <p class="slide-caption">...to the back</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar6.JPG" alt="">
+                <p class="slide-caption">Stringing the guitar</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar_full.jpg" alt="">
+                <p class="slide-caption">Finished guitar!</p>
             </div>
 
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
 
         </div>
+
+        <div class="video-block">
+            <video controls style="width: 400px">
+                <source src="../images/whoknowsguitar.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="caption">"Who Knows" by Daniel Caesar</p>
+        </div>
+
         <hr>
+        <p>
+            Woodworking Tools
+            <ul>
+                <li>Router</li>
+                <li>Router table</li>
+                <li>Bandsaw</li>
+                <li>Disc sander, spindel sander, orbital sander</li>
+                <li>Plane</li>
+                <li>Chamfer plane</li>
+            </ul></p>
+
         <p>
             Electronics
             <ul>
-                <li>Arduino Nano RP2040</li>
-                <li>PS4 controller</li>
-                <li>LiPo battery</li>
-                <li>Power distribution breakout board</li>
-                <li>GXservo G25 servos</li>
+                <li>Humbucker pickups</li>
+                <li>500k potentiometer</li>
+                <li>22nF tone capacitor</li>
             </ul>
         </p>
     </div>
@@ -93,6 +126,11 @@
     <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
+
+    const currentDisplay = document.getElementById("current-slide");
+    const totalDisplay = document.getElementById("total-slides");
+
+    totalDisplay.textContent = slides.length;
 
     function changeSlide(direction) {
         slides[currentSlide].classList.remove("active");
@@ -108,6 +146,7 @@
         }
 
         slides[currentSlide].classList.add("active");
+        currentDisplay.textContent = currentSlide + 1;
     }
     </script>
 

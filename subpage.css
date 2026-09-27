@@ -63,7 +63,7 @@ li {
     position: relative;
     width: 100%;
     max-width: 350px;
-    margin: 20px auto;
+    margin: 30px 0; /* 20px auto for centered one */
 }
 
 .slide {
@@ -83,7 +83,7 @@ li {
 
 .slide-caption {
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .prev,
@@ -106,6 +106,18 @@ li {
 
 .next {
     right: 10px;
+}
+
+
+.slideshow .slide-counter {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    color: #aaa;
+    font-weight: 400;
+    z-index: 3;
 }
 
 /* Mobile: override padding and spacing */
@@ -133,9 +145,14 @@ li {
     font-size: 15px;
 }
 
+.video-block {
+    width: fit-content;
+}
+
 .caption {
-    font-size: 10px;
-    padding: 0 160px;
+    text-align: center;
+    margin-top: 6px;
+    font-size: 12px;
 }
 
 header {
