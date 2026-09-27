@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kate Xu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../index.css"> -->
+    <link rel="stylesheet" href="../subpage.css">
+</head>
+<body>
+    <!-- <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div> -->
+    <header id="header">
+        <table>
+            <tr>
+                <!-- <td id="logo">Kate Xu</td> -->
+                <td id="home"><a href="../portfolio.html">Kate Xu</a></td>
+                <td id="navigation">
+                    <!-- <a href="#bio">about</a> -->
+                    <!-- <a href="../index.html#projects">projects</a>
+                    <a href="../index.html#photography">photography</a> -->
+                    <!-- <a href="../index.html">home</a> -->
+                    <!-- <a href="">blog</a> -->
+                    <!-- <a href="#contact">contact</a> -->
+                </td>
+            </tr>
+        </table>
+    </header>
+    <br><br><br>
+    <div id="blogs">
+        <h1>Electric Guitar</h1>
+        <h4>January 2026-May 2026</h4>
+        <img src="../images/guitar_full.jpg" style="height: 450px">
+        <p>
+            In high school I spent many nights learning and playing the guitar, but I wasn't able to bring my guitar to college. So, I decided to build my own!
+        </p>
+        <p>
+            I made the body of the guitar, and purchased the guitar neck and pickups. The total project, including the electronics and a guitar amp, was $315; if you're curious, here's my <a class="link" href="https://docs.google.com/spreadsheets/d/1hlAq4DmobSHkZW1_i3QXpsIVq-bNLOpl2DFBp7cUzHI/edit?usp=sharing">BOM</a>.
+        </p>
+        <p>
+            This project had a few main phases: ideation and design, woodworking, and electronics and debugging. Through this project I learned how much I love woodworking - there is something immensely satisfying and beautiful in carving out and creating from a block of wood! Guitar is now even more enjoyable now that I can play my own :)
+        </p>
+        <div class="slideshow">
+
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+
+            <div class="slide active">
+                <img src="../images/guitar2.jpg">
+                <p class="slide-caption">Making the body of the guitar</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar.jpg" alt="">
+                <p class="slide-caption">Caption for photo 2</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar4.JPG" alt="">
+                <p class="slide-caption">Caption for photo 2</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar5.jpg" alt="">
+                <p class="slide-caption">Caption for photo 3</p>
+            </div>
+
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+        </div>
+        <hr>
+        <p>
+            Electronics
+            <ul>
+                <li>Arduino Nano RP2040</li>
+                <li>PS4 controller</li>
+                <li>LiPo battery</li>
+                <li>Power distribution breakout board</li>
+                <li>GXservo G25 servos</li>
+            </ul>
+        </p>
+    </div>
+    <!-- <script src="../index.js" type="text/javascript"></script> -->
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function changeSlide(direction) {
+        slides[currentSlide].classList.remove("active");
+
+        currentSlide += direction;
+
+        if (currentSlide >= slides.length) {
+            currentSlide = 0;
+        }
+
+        if (currentSlide < 0) {
+            currentSlide = slides.length - 1;
+        }
+
+        slides[currentSlide].classList.add("active");
+    }
+    </script>
+
+</body>
+</html>
