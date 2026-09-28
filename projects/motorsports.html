@@ -38,17 +38,48 @@
     <br><br><br>
     <div id="blogs">
         <h1>MIT Motorsports: Driverless Mechanisms</h1>
-        <h4>September 2025 - Ongoing</h4>
+        <h4>September 2025 - May 2026</h4>
         <img src="../portfolio_images/driverless.png" alt="Driverless actuation system" style="width: 250px">
         <br>
-        <img src="../portfolio_images/spacers.PNG" alt="Machined spacers" style="height: 100px">
-        <img src="../portfolio_images/turning.jpg" alt="Turned parts" style="height: 100px">
         <img src="../portfolio_images/drawing.png" alt="Mechanical drawing" style="height: 100px">
-        <p><b><a class="link" href="https://fsae.mit.edu/">MIT FSAE</a></b></p>
-        <p>
-            <b>Summary</b>: Led the design of the autonomous steering actuation system as Responsible Engineer for MIT Motorsports’ first driverless Formula SAE racecar. Defined quantitative system requirements (torque, speed, mass, cost, packaging) and evaluated multiple architectures through a formal design review process, designing a column-mounted motor and pulley system packaged within 2 inches and weighing 0.56 kg. Iterated the system through a full design cycle into fabrication, including custom welding jig design and machining.
-            <!-- Planning testing and integration with autonomous driving control software and a safety-critical electrical emergency brake system. -->
-        </p>
+
+        <p>This year was the first year in the history of <a class="link" href="https://fsae.mit.edu/">MIT Motorsports</a>, MIT’s competitive Formula SAE (FSAE) team, where the racecar we designed and built from scratch was also designed to drive fully autonomously! As Responsible Engineer for Driverless Mechanisms, I led the design of our driverless power steering system.</p>
+        <p>I began by defining quantitative system requirements, including steering requirements of 12.6 Nm peak torque, 6.3 Nm nominal torque, and 200 deg/s steering rate; maximum mass of 2.04 kg; and other functional requirements. Due to packaging constraints, the full actuation system also needed to fit within 50 mm, or just under 2 inches. This constraint was one major consideration in motor sizing, as I'll describe later.</p>
+
+        <div class="slideshow">
+
+            <div class="slide-counter">
+                <span class="current-slide">1</span> /
+                <span class="total-slides"></span>
+            </div>
+
+            <button class="prev">&#10094;</button>
+
+            <div class="slide active">
+                <img src="../images/guitar2.jpg">
+                <p class="slide-caption">Making the body of the guitar</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar.jpg" alt="">
+                <p class="slide-caption">Adding layers of finish (wipe-on polyurethane)</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar4.JPG" alt="">
+                <p class="slide-caption">Routing the pickups through the front...</p>
+            </div>
+
+            <button class="next">&#10095;</button>
+
+        </div>
+
+
+
+        <p> and evaluated multiple architectures through a formal design review process, designing a column-mounted motor and pulley system packaged within 2 inches and weighing 0.56 kg. Iterated the system through a full design cycle into fabrication, including custom welding jig design and machining.</p>
+        <p>Through this project I learned the rigor of engineering and the importance of research, justification, and communication within engineering, particularly in a team setting. In MIT Motorsports, we follow the full design process with design review and feedback, from setting design requirements to fabrication and testing. It’s through these rigorous design reviews that we receive feedback, communicate and collaborate with other subsystems, and improve on our designs.</p>
+
+        <hr>
         <p>
             <b>Skills</b>
             <ul>
@@ -57,10 +88,75 @@
                 <li>Machining and fabrication: manual mill, CNC mill (CAM, conversational programming), lathe, waterjet, 3d printing</li>
             </ul>
         </p>
-        <hr>
-        <p>This year is the first year in the history of MIT Motorsports, MIT’s competitive Formula SAE (FSAE) team, where the racecar we design and build from scratch will also be able to drive fully autonomously! As responsible engineer for Driverless Mechanisms, I researched, designed, and am now fabricating our driverless power steering system.</p>
-        <p>Through this project I learned the rigor of engineering and the importance of research, justification, and communication within engineering, particularly in a team setting. In MIT Motorsports, we follow the full design process with design review and feedback, from setting design requirements to fabrication and testing. It’s through these rigorous design reviews that we receive feedback, communicate and collaborate with other subsystems, and improve on our designs.</p>
+
+        <p>
+            Throughout the season, I also helped out with a few other tasks on different parts of the car.
+        </p>
+
+        <div class="slideshow">
+
+            <div class="slide-counter">
+                <span class="current-slide">1</span> /
+                <span class="total-slides"></span>
+            </div>
+
+            <button class="prev">&#10094;</button>
+
+            <div class="slide active">
+                <img src="../images/power_steering/spacers.PNG">
+                <p class="slide-caption">Steering rack spacers, machined conversationally on CNC mill</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/power_steering/turning.jpg" alt="">
+                <p class="slide-caption">Adding layers of finish (wipe-on polyurethane)</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/guitar4.JPG" alt="">
+                <p class="slide-caption">Routing the pickups through the front...</p>
+            </div>
+
+            <button class="next">&#10095;</button>
+
+        </div>
+
     </div>
     <!-- <script src="../index.js" type="text/javascript"></script> -->
+
+    <script>
+    document.querySelectorAll(".slideshow").forEach((slideshow) => {
+        const slides = slideshow.querySelectorAll(".slide");
+        const prev = slideshow.querySelector(".prev");
+        const next = slideshow.querySelector(".next");
+        const currentDisplay = slideshow.querySelector(".current-slide");
+        const totalDisplay = slideshow.querySelector(".total-slides");
+
+        let currentSlide = 0;
+
+        totalDisplay.textContent = slides.length;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = index;
+
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add("active");
+            currentDisplay.textContent = currentSlide + 1;
+        }
+
+        prev.addEventListener("click", () => {
+            showSlide(currentSlide - 1);
+        });
+
+        next.addEventListener("click", () => {
+            showSlide(currentSlide + 1);
+        });
+    });
+    </script>
+
 </body>
 </html>
