@@ -42,11 +42,27 @@
         <img src="../portfolio_images/driverless.png" alt="Driverless actuation system" style="width: 250px">
         <br>
 
+        <p>
+            <b>Summary</b>: Led the design of the autonomous steering actuation system as Responsible Engineer for MIT Motorsports’ first driverless Formula SAE racecar. Defined quantitative system requirements (torque, speed, mass, cost, packaging) and evaluated multiple architectures through a formal design review process, designing a column-mounted motor and pulley system packaged within 2 inches and weighing 0.56 kg. Iterated the system through a full design cycle into fabrication, including custom welding jig design and machining.
+            <!-- Planning testing and integration with autonomous driving control software and a safety-critical electrical emergency brake system. -->
+        </p>
+        <p>
+            <b>Skills</b>
+            <ul>
+                <li>CAD/PLM: Siemens NX, Siemens Teamcenter</li>
+                <li>Machining: CNC mill (CAM, conversational programming), manual mill, lathe, waterjet</li>
+            </ul>
+        </p>
+        <hr>
+
         <p>This was the first year in the history of <a class="link" href="https://fsae.mit.edu/">MIT Motorsports</a>, MIT’s competitive Formula SAE (FSAE) team, where the racecar we designed and built from scratch was also designed to drive fully autonomously! As Responsible Engineer for Driverless Mechanisms, I led the design of our driverless power steering system.</p>
         <p>I began by defining quantitative system requirements, including steering requirements of 12.6 Nm peak torque, 6.3 Nm nominal torque, and 200 deg/s steering rate; maximum mass of 2 kg; and other functional requirements. I derived the steering requirements from telemetry data and measured static torque from our previous racecar, and worked with system interfaces such as EE and autonomous to size the motor to a 60W power limit. Due to packaging constraints, the full actuation system also needed to fit within 50 mm, or just under 2 inches.</p>
 
         <img src="../images/power_steering/designrequirements.png" style="width:550px">
         <p>With my teammate Aleks, I researched and evaluated various power steering architectures on a number of factors including simplicity, risks, packaging, backlash, manufacturing difficulty, mass, and cost. We evaluated mounting locations and drive methods similarly, and ended up deciding on a rotary, column-based power steering design. I used the <a class="link" href="https://www.gates.com/content/dam/documents-library/catalogs/powergrip-gt3-drive-design-manual-en.pdf">Gates Belt Selection Manual</a> to select a timing belt, and did calculations to size the motor, gearbox, and pulley center-to-center distance.</p>
+
+        <p>The power steering system I designed uses a timing belt drive and steel pulleys mounted to the steering rack via a mounting plate, with the column pulley welded to the steering column shaft coupler. The assembly is driven by a Maxon BLDC motor with a 138:1 GR planetary gearbox, packages within 50 mm, weighs 0.56 kg, and meets the torque and speed functional requirements I set. It is now being put on the car, and will be tested for autonomous driving in the coming few weeks!</p>
+        <p>Through this project I learned the rigor of engineering and the importance of research, justification, and communication within engineering, particularly in a team setting. I learned to receive feedback, communicate and collaborate with other subsystems, and improve on my designs, particularly via iterating the system through a formal design review process and the full design cycle.</p>
 
         <div class="slideshow">
 
@@ -80,18 +96,6 @@
             <button class="next">&#10095;</button>
 
         </div>
-
-        <p>The power steering system I designed uses a timing belt drive and steel pulleys mounted to the steering rack via a mounting plate, with the column pulley welded to the steering column shaft coupler. The assembly is driven by a Maxon BLDC motor with a 138:1 GR planetary gearbox, packages within 50 mm, weighs 0.56 kg, and meets the torque and speed functional requirements I set. It is now being put on the car, and will be tested for autonomous driving in the coming few weeks!</p>
-        <p>Through this project I learned the rigor of engineering and the importance of research, justification, and communication within engineering, particularly in a team setting. I learned to receive feedback, communicate and collaborate with other subsystems, and improve on my designs, particularly via iterating the system through a formal design review process and the full design cycle.</p>
-
-        <hr>
-        <p>
-            <b>Skills</b>
-            <ul>
-                <li>CAD/PLM: Siemens NX, Siemens Teamcenter</li>
-                <li>Machining and fabrication: manual mill, CNC mill (CAM, conversational programming), lathe, waterjet, 3d printing</li>
-            </ul>
-        </p>
 
     </div>
     <!-- <script src="../index.js" type="text/javascript"></script> -->
