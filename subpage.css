@@ -62,7 +62,7 @@ li {
 .slideshow {
     position: relative;
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     margin: 30px 0; /* 20px auto for centered one */
 }
 
@@ -101,11 +101,11 @@ li {
 }
 
 .prev {
-    left: 10px;
+    left: -40px;
 }
 
 .next {
-    right: 10px;
+    right: -40px;
 }
 
 
