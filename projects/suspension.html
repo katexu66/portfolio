@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kate Xu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../index.css"> -->
+    <link rel="stylesheet" href="../subpage.css">
+</head>
+<body>
+    <!-- <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div> -->
+    <header id="header">
+        <table>
+            <tr>
+                <!-- <td id="logo">Kate Xu</td> -->
+                <td id="home"><a href="../portfolio.html">Kate Xu</a></td>
+                <td id="navigation">
+                    <!-- <a href="#bio">about</a> -->
+                    <!-- <a href="../index.html#projects">projects</a>
+                    <a href="../index.html#photography">photography</a> -->
+                    <!-- <a href="../index.html">home</a> -->
+                    <!-- <a href="">blog</a> -->
+                    <!-- <a href="#contact">contact</a> -->
+                </td>
+            </tr>
+        </table>
+    </header>
+    <br><br><br>
+    <div id="blogs">
+        <h1>MIT Motorsports: Driverless Mechanisms</h1>
+        <h4>June 2026 - Ongoing</h4>
+        <!-- <img src="../portfolio_images/driverless.png" alt="Driverless actuation system" style="width: 250px"> -->
+        <!-- <br> -->
+
+        <p>
+            This is my second year on MIT Motorsports. Last year I worked on <a class="link" href=powersteering.html>power steering</a>, and this year I'm Suspension Lead! As Suspension Lead, I'm leading a team of 11 engineers to design and fabricate the rockers, suspension links, and steering systems on the car. I own the technical milestones, timelines, and budgets across the subsystems, make go/no-go decisions (including, as of last week, a go on our first set of carbon fiber suspension links!), and provide technical guidance through all elements of the design cycle, including functional requirements, architecture selection, design, and manufacturing.
+        </p>
+        <p> As Suspension Lead, I also worked with the rockers REs and VD lead to select and justify the development of a new suspension architecture this year—four-corner pushrod suspension with a rear anti-roll bar and third-element heave control—based on vehicle dynamics, packaging, mass, budget, and adjustability requirements. </p>
+        <p> So far we've finished setting the functional requirements for all of the suspension subsystems, decided on architectures, and are now beginning design. I can't wait for this season, and for the development of an amazing racecar suspension. </p>
+
+        <!-- <div class="slideshow">
+
+            <div class="slide-counter">
+                <span class="current-slide">1</span> /
+                <span class="total-slides"></span>
+            </div>
+
+            <button class="prev">&#10094;</button>
+
+            <div class="slide active">
+                <img src="../images/power_steering/psassembly.png">
+                <p class="slide-caption">Power steering assembly</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/power_steering/weldingasm.PNG">
+                <p class="slide-caption">Welding jig and assembly</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/power_steering/spacers.PNG">
+                <p class="slide-caption">Steering rack spacers, machined conversationally on CNC mill</p>
+            </div>
+
+            <div class="slide">
+                <img src="../images/power_steering/turning.jpg" alt="">
+                <p class="slide-caption">Push rod inserts for suspension links, turned on lathe</p>
+            </div>
+
+            <button class="next">&#10095;</button>
+
+        </div> -->
+        <br>
+
+    </div>
+    <!-- <script src="../index.js" type="text/javascript"></script> -->
+
+    <script>
+    document.querySelectorAll(".slideshow").forEach((slideshow) => {
+        const slides = slideshow.querySelectorAll(".slide");
+        const prev = slideshow.querySelector(".prev");
+        const next = slideshow.querySelector(".next");
+        const currentDisplay = slideshow.querySelector(".current-slide");
+        const totalDisplay = slideshow.querySelector(".total-slides");
+
+        let currentSlide = 0;
+
+        totalDisplay.textContent = slides.length;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide = index;
+
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+
+            slides[currentSlide].classList.add("active");
+            currentDisplay.textContent = currentSlide + 1;
+        }
+
+        prev.addEventListener("click", () => {
+            showSlide(currentSlide - 1);
+        });
+
+        next.addEventListener("click", () => {
+            showSlide(currentSlide + 1);
+        });
+    });
+    </script>
+
+</body>
+</html>
