@@ -130,6 +130,12 @@ ul {
     font-weight: 400;
 }
 
+.year {
+    margin-top: -1em;
+    font-size: 13px;
+    color: #888;
+}
+
 .caption2 {
     font-size: 8px;
     margin-top: 0em;
